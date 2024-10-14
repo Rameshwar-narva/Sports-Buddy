@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Form Section Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+  padding: 10px;
+  margin: 10px 0;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button Styles */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#category-form button, #city-form button, #area-form button {
+  background-color: #28a745;
+}
+
+#category-form button:hover, #city-form button:hover, #area-form button:hover {
+  background-color: #218838;
+}
+
+#delete-sports-section button {
+  background-color: #dc3545;
+}
+
+#delete-sports-section button:hover {
+  background-color: #c82333;
+}
+
+/* Dashboard and Section Styling */
+#admin-dashboard, #event-section, #register-section, #login-section, #admin-login-section {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+/* Lists for Displaying Categories, Cities, Areas, and Events */
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+ul li {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul li button {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #admin-dashboard, #event-section, #register-section, #login-section, #admin-login-section {
+    width: 90%;
+  }
+
+  input[type="email"], input[type="password"], input[type="text"] {
+    width: 100%;
+  }
+
+  ul {
+    width: 100%;
+  }
+}

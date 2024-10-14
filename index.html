@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Buddy</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA9w69s9IiJ0t1OiKcZfydMNmZYlk_xeXY",
+      authDomain: "sports-buddy-abaab.firebaseapp.com",
+      projectId: "sports-buddy-abaab",
+      storageBucket: "sports-buddy-abaab.appspot.com",
+      messagingSenderId: "418676246182",
+      appId: "1:418676246182:web:5308eadbe020e80f73d667"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <h1>Sports Buddy</h1>
+  
+  <!-- User Registration Form -->
+  <div id="register-section">
+    <h2>Register</h2>
+    <form id="register-form">
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="password" id="password" placeholder="Enter your password" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <!-- User Login Form -->
+  <div id="login-section">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Enter your email" required>
+      <input type="password" id="login-password" placeholder="Enter your password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Add Sports Event Form -->
+  <div id="event-section" style="display:none;">
+    <h2>Add/Manage Sports Events</h2>
+    <form id="add-event-form">
+      <input type="text" id="event-name" placeholder="Enter event name" required>
+      <button type="submit">Add Event</button>
+    </form>
+    
+    <div>
+      <h3>Manage Events</h3>
+      <ul id="event-list"></ul>
+    </div>
+  </div>
+  <h1>Sports Buddy - Admin Panel</h1>
+  
+  <!-- Admin Login Form -->
+  <div id="admin-login-section">
+    <h2>Admin Login</h2>
+    <form id="admin-login-form">
+      <input type="email" id="admin-email" placeholder="Enter admin email" required>
+      <input type="password" id="admin-password" placeholder="Enter admin password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Admin Dashboard for Sports Management (hidden by default) -->
+  <div id="admin-dashboard" style="display:none;">
+    <h2>Admin Dashboard</h2>
+
+    <!-- Add/Update Sports Categories -->
+    <div id="sports-category-section">
+      <h3>Manage Sports Categories</h3>
+      <form id="category-form">
+        <input type="text" id="category-name" placeholder="Enter category name" required>
+        <button type="submit">Add/Update Category</button>
+      </form>
+      <ul id="category-list"></ul>
+    </div>
+
+    <!-- Add/Update Cities -->
+    <div id="city-section">
+      <h3>Manage Cities</h3>
+      <form id="city-form">
+        <input type="text" id="city-name" placeholder="Enter city name" required>
+        <button type="submit">Add/Update City</button>
+      </form>
+      <ul id="city-list"></ul>
+    </div>
+
+    <!-- Add/Update Areas -->
+    <div id="area-section">
+      <h3>Manage Areas</h3>
+      <form id="area-form">
+        <input type="text" id="area-name" placeholder="Enter area name" required>
+        <button type="submit">Add/Update Area</button>
+      </form>
+      <ul id="area-list"></ul>
+    </div>
+
+    <!-- Delete Sports Events -->
+    <div id="delete-sports-section">
+      <h3>Delete Sports Events</h3>
+      <ul id="sports-event-list"></ul>
+    </div>
+  </div>
+
+  <!-- Include JS files -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
